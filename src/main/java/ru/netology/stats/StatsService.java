@@ -11,11 +11,8 @@ public class StatsService {
     }
 
     public double calcAvgSales(int[] sales) {
-        int sumSales = 0;
-        for (int i = 0; i < sales.length; i++) {
-            sumSales = sumSales + sales[i];
-        }
-        int avgSales = sumSales/sales.length;
+        int sumSales = calcSumSales(sales);
+        int avgSales = sumSales / sales.length;
         return avgSales;
     }
 
@@ -44,11 +41,7 @@ public class StatsService {
     }
 
     public int countHigherThenAvgMonths(int[] sales) {
-        int sumSales = 0;
-        for (int i = 0; i < sales.length; i++) {
-            sumSales = sumSales + sales[i];
-        }
-        int avgSales = sumSales/sales.length;
+        double avgSales = calcAvgSales(sales);
         int numHigherThenAvgMonths = 0;
         for (int n = 0; n < sales.length; n++) {
             if (sales[n] > avgSales) {
@@ -59,11 +52,7 @@ public class StatsService {
     }
 
     public int countLowerThenAvgMonths(int[] sales) {
-        int sumSales = 0;
-        for (int i = 0; i < sales.length; i++) {
-            sumSales = sumSales + sales[i];
-        }
-        int avgSales = sumSales / sales.length;
+        double avgSales = calcAvgSales(sales);
         int numLowerThenAvgMonths = 0;
         for (int n = 0; n < sales.length; n++) {
             if (sales[n] < avgSales) {

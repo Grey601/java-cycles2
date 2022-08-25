@@ -9,7 +9,7 @@ public class StatsServiceTest {
     public void shouldCalcSumSalesTest() {
         StatsService service = new StatsService();
 
-        int[] sales = { 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18 };
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int sumExpected = 180;
         int sumActual = service.calcSumSales(sales);
@@ -21,7 +21,7 @@ public class StatsServiceTest {
     public void shouldCalcAvgSalesTest() {
         StatsService service = new StatsService();
 
-        int[] sales = { 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18 };
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int avgExpected = 15;
         double avgActual = service.calcAvgSales(sales);
@@ -33,7 +33,7 @@ public class StatsServiceTest {
     public void shouldFindMaxSalesTest() {
         StatsService service = new StatsService();
 
-        int[] sales = { 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18 };
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int maxSalesMonthExpected = 8;
         int maxSalesMonthActual = service.maxSalesMonth(sales);
@@ -45,7 +45,7 @@ public class StatsServiceTest {
     public void shouldFindMinSalesTest() {
         StatsService service = new StatsService();
 
-        int[] sales = { 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18 };
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int minSalesMonthExpected = 9;
         int minSalesMonthActual = service.minSalesMonth(sales);
@@ -57,7 +57,7 @@ public class StatsServiceTest {
     public void shouldCountHigherThenAvgMonthsTest() {
         StatsService service = new StatsService();
 
-        int[] sales = { 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18 };
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int higherThenAvgMonthsExpected = 5;
         int higherThenAvgMonthsActual = service.countHigherThenAvgMonths(sales);
@@ -69,7 +69,7 @@ public class StatsServiceTest {
     public void shouldCountLowerThenAvgMonthsTest() {
         StatsService service = new StatsService();
 
-        int[] sales = { 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18 };
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int lowerThenAvgMonthsExpected = 5;
         int lowerThenAvgMonthsActual = service.countLowerThenAvgMonths(sales);
